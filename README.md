@@ -1,16 +1,13 @@
 # docker-nginx-rtmp
-NGINX + nginx-rtmp-module + Fmpeg with default settings for HLS live streaming.
-
-Built on Latest ubuntu. Based on [banianhost/docker-nginx-rtmp](https://github.com/banianhost/docker-nginx-rtmp)
-
+NGINX + nginx-rtmp-module + Fmpeg with default settings for HLS live streaming. Built on Latest ubuntu. 
 * Nginx 1.13.6 (compiled from source)
 * nginx-rtmp-module master (compiled from source)
 * ffmpeg
 * Default HLS settings (See: [nginx.conf](nginx.conf))
 
-[![Docker Stars](https://img.shields.io/docker/stars/banianhost/nginx-rtmp.svg)](https://hub.docker.com/r/banianhost/nginx-rtmp/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/banianhost/nginx-rtmp.svg)](https://hub.docker.com/r/alfg/nginx-rtmp/)
-[![Docker Automated build](https://img.shields.io/docker/automated/banianhost/nginx-rtmp.svg)](https://hub.docker.com/r/alfg/nginx-rtmp/builds/)
+[![Docker Stars](https://img.shields.io/docker/stars/banian/nginx-rtmp.svg)](https://hub.docker.com/r/banianhost/nginx-rtmp/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/banian/nginx-rtmp.svg)](https://hub.docker.com/r/alfg/nginx-rtmp/)
+[![Docker Automated build](https://img.shields.io/docker/automated/banian/nginx-rtmp.svg)](https://hub.docker.com/r/alfg/nginx-rtmp/builds/)
 
 ## Usage
 
@@ -18,8 +15,8 @@ Built on Latest ubuntu. Based on [banianhost/docker-nginx-rtmp](https://github.c
 * Pull docker image and run:
 
 ```
-docker pull banianhost/nginx-rtmp
-docker run -it -p 1935:1935 -p 8080:80 --rm banianhost/nginx-rtmp
+docker pull banian/nginx-rtmp
+docker run -it -p 1935:1935 -p 8080:80 --rm banian/nginx-rtmp
 ```
 or 
 
@@ -50,4 +47,7 @@ http://<server ip>:8080/live/$STREAM_NAME.m3u8
 
 ## License 
 
-MIT
+MIT - Pooya Parsa - BanianHost
+
+Source code based on [banian/docker-nginx-rtmp](https://github.com/banianhost/docker-nginx-rtmp) (MIT)
+
