@@ -1,13 +1,16 @@
-# docker-nginx-rtmp
-NGINX + nginx-rtmp-module + Fmpeg with default settings for HLS live streaming. Built on Latest ubuntu. 
-* Nginx 1.13.6 (compiled from source)
-* nginx-rtmp-module master (compiled from source)
-* ffmpeg
-* Default HLS settings (See: [nginx.conf](nginx.conf))
+# Docker Nginx HLS
 
-[![Docker Stars](https://img.shields.io/docker/stars/banian/nginx-rtmp.svg)](https://hub.docker.com/r/banianhost/nginx-rtmp/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/banian/nginx-rtmp.svg)](https://hub.docker.com/r/alfg/nginx-rtmp/)
-[![Docker Automated build](https://img.shields.io/docker/automated/banian/nginx-rtmp.svg)](https://hub.docker.com/r/alfg/nginx-rtmp/builds/)
+[![Docker Stars](https://img.shields.io/docker/stars/banian/nginx-hls.svg?style=flat-square)](https://hub.docker.com/r/banianhost/nginx-rtmp/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/banian/nginx-hls.svg?style=flat-square)](https://hub.docker.com/r/alfg/nginx-rtmp/)
+[![Docker Automated build](https://img.shields.io/docker/automated/banian/nginx-hls.svg?style=flat-square)](https://hub.docker.com/r/alfg/nginx-rtmp/builds/)
+
+NGINX + nginx-hls-module + ffmpeg with default settings for HLS live streaming. 
+
+- Based on ubuntu
+- Nginx 1.13.6 (compiled from source)
+- nginx-hls-module master (compiled from source)
+- ffmpeg
+- Default HLS settings (See: [nginx.conf](nginx.conf))
 
 ## Usage
 
@@ -15,16 +18,16 @@ NGINX + nginx-rtmp-module + Fmpeg with default settings for HLS live streaming. 
 * Pull docker image and run:
 
 ```
-docker pull banian/nginx-rtmp
-docker run -it -p 1935:1935 -p 8080:80 --rm banian/nginx-rtmp
+docker pull banian/nginx-hls
+docker run -it -p 1935:1935 -p 8080:80 --rm banian/nginx-hls
 ```
 or 
 
 * Build and run container from source:
 
 ```
-docker build -t nginx-rtmp .
-docker run -it -p 1935:1935 -p 8080:80 --rm nginx-rtmp
+docker build -t nginx-hls .
+docker run -it -p 1935:1935 -p 8080:80 --rm nginx-hls
 ```
 
 * Stream live content to:
@@ -47,7 +50,5 @@ http://<server ip>:8080/live/$STREAM_NAME.m3u8
 
 ## License 
 
-MIT - Pooya Parsa - BanianHost
-
-Source code based on [banian/docker-nginx-rtmp](https://github.com/banianhost/docker-nginx-rtmp) (MIT)
+MIT - Pooya Parsa - BanianHost - source code based on [alfg/docker-nginx-rtmp](https://github.com/alfg/docker-nginx-rtmp) (MIT)
 
